@@ -31,6 +31,7 @@ Students learn key concepts like the **sum of squared errors (SSE)** for measuri
   - **Prediction and User Interaction:** The program allows users to input their own caffeine intake to receive a predicted participation level, fostering engagement and real-time exploration.  
 
 <details>
+ <p></p>
   <summary>How to Run the Program:</summary>
     
 1. **Clone the Repository:**  
@@ -68,6 +69,7 @@ The project focuses on **entropy** and **information gain** to evaluate how well
   
 
 <details>
+ <p></p>
   <summary>How to Run the Program:</summary>
     
 1. **Clone the Repository:**  
@@ -105,6 +107,7 @@ The project offers a practical application of unsupervised learning, demonstrati
   
 
 <details>
+ <p></p>
   <summary>How to Run the Program:</summary>
     
 1. **Clone the Repository:**  
@@ -141,6 +144,7 @@ By analysing a sample text (such as the script of Romeo and Juliet), the program
   
 
 <details>
+ <p></p>
   <summary>How to Run the Program:</summary>
     
 1. **Clone the Repository:**  
