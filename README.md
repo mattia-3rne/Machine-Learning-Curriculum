@@ -16,9 +16,6 @@ The curriculum aims to make machine learning accessible for high school students
 
 ## 1. 📈 Linear Regression: Caffeine Intake vs. Participation
 
-### Overview:
-### 📈 Linear Regression: Caffeine Intake vs. Participation  
-
 ### Overview:  
 This program uses **linear regression** to predict class participation based on **caffeine intake**, illustrating how machine learning can model relationships between variables. By fitting a line to data points, the project provides an intuitive introduction to **predictive modeling** and **trend analysis**.  
 
