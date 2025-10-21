@@ -2,10 +2,7 @@
  
 
 
-📘 A collection of machine learning programs designed as part of my Matura thesis to introduce high school students to fundamental ML concepts. Explore the **High School Machine Learning Curriculum** I developed, hosted on Notion. This resource hub is designed to help educators introduce machine learning concepts to students in an interactive and accessible way:
-[![Notion Site](https://img.shields.io/badge/Notion-View%20Site-black?logo=notion)](https://mattia-erne.notion.site/High-School-Machine-Learning-Curriculum-A-Resource-Hub-For-Educators-13bd0dc06fea806fa924d097bf0de1a6)
-
-
+📘 A collection of machine learning programs designed as part of my Matura thesis to introduce high school students to fundamental ML concepts. This resource hub is designed to help educators introduce machine learning concepts to students in an interactive and accessible way!
 
 ## Introduction
 This repository contains four machine learning projects developed to provide hands-on examples of core machine learning algorithms. The programs cover supervised and unsupervised learning, offering practical insights into how algorithms operate on data.
