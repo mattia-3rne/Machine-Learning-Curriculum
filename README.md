@@ -2,7 +2,7 @@
  
 
 
-📘 A collection of machine learning programs designed as part of my Matura thesis to introduce high school students to fundamental ML concepts. This resource hub is designed to help educators introduce machine learning concepts to students in an interactive and accessible way!
+A collection of machine learning programs designed as part of my Matura thesis to introduce high school students to fundamental ML concepts. This resource hub is designed to help educators introduce machine learning concepts to students in an interactive and accessible way!
 
 ## Introduction
 This repository contains four machine learning projects developed to provide hands-on examples of core machine learning algorithms. The programs cover supervised and unsupervised learning, offering practical insights into how algorithms operate on data.
