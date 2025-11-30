@@ -19,7 +19,7 @@ $$y = mx + b$$
 
 It optimizes the slope ($m$) and intercept ($b$) by minimizing the **Sum of Squared Errors (SSE)**:
 
-$$\text{SSE} = \sum_{i=1}^{n} (y_i - (mx_i + b))^2 = \sum_{i=1}^{n} (y_i - \hat{y}_i)^2$$
+$$\text{SSE}  = \sum_{i=1}^{n} (y_i - \hat{y}_i)^2 = \sum_{i=1}^{n} (y_i - (mx_i + b))^2$$
 
 ---
 
