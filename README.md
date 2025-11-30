@@ -14,9 +14,11 @@ This program uses **linear regression** to predict class participation based on 
 
 ### Key Mathematics
 The model finds the **line of best fit** defined by the linear equation:
+
 $$y = mx + b$$
 
 It optimizes the slope ($m$) and intercept ($b$) by minimizing the **Sum of Squared Errors (SSE)**:
+
 $$\text{SSE} = \sum_{i=1}^{n} (y_i - (mx_i + b))^2 = \sum_{i=1}^{n} (y_i - \hat{y}_i)^2$$
 
 ---
@@ -29,11 +31,14 @@ This program implements a **Decision Tree Classifier** to predict if a student p
 ### Key Mathematics
 **Entropy ($H$):**
 Measures impurity in a dataset $S$:
+
 $$H(S) = - \sum_{i} p_i \cdot \log_2(p_i)$$
 
 **Information Gain ($IG$):**
 Determines the best split by comparing parent entropy to the weighted entropy of children nodes ($S_c$):
+
 $$IG(S) = H(S) - \sum_{c} \frac{|S_c|}{|S|} H(S_c)$$
+
 ---
 
 ## 🔍 k-Means Clustering: Homework Effort Analysis
@@ -43,9 +48,11 @@ This program uses **k-Means Clustering** to categorise homework assignments into
 
 ### Key Mathematics
 The algorithm groups points by calculating the **Euclidean distance** between a data point ($x$) and a cluster center (centroid $\mu$):
+
 $$d(x, \mu) = \sqrt{(x_1 - \mu_1)^2 + (x_2 - \mu_2)^2}$$
 
 The centroid is updated iteratively by calculating the **mean** of all points in the cluster:
+
 $$\mu_j = \frac{1}{n} \sum x_i$$
 
 ---
@@ -57,9 +64,11 @@ This program uses a **Naive Bayes** model to generate text in the style of Shake
 
 ### Key Mathematics
 The model calculates transition probabilities using **Bayes' Theorem**:
+
 $$P(A|B) = \frac{P(B|A) \cdot P(A)}{P(B)}$$
 
 To introduce variety, predictions are adjusted using **Temperature ($T$)** inside a Softmax function:
+
 $$P'(w) = \frac{e^{\log{(P(w))}/T}}{\sum e^{\log{(P(w_i))}/T}}$$
 
 ---
