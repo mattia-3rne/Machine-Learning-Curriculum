@@ -17,7 +17,7 @@ The model finds the **line of best fit** defined by the linear equation:
 $$y = mx + b$$
 
 It optimizes the slope ($m$) and intercept ($b$) by minimizing the **Sum of Squared Errors (SSE)**:
-$$\text{SSE} = \sum_{i=1}^{n} (y_i - \hat{y}_i)^2$$
+$$\text{SSE} = \sum_{i=1}^{n} (y_i - (mx_i + b))^2 = \sum_{i=1}^{n} (y_i - \hat{y}_i)^2$$
 
 ---
 
@@ -27,12 +27,13 @@ $$\text{SSE} = \sum_{i=1}^{n} (y_i - \hat{y}_i)^2$$
 This program implements a **Decision Tree Classifier** to predict if a student passes an exam based on **scores** and **study hours**. It visualizes how the algorithm splits data recursively to create decision boundaries.
 
 ### Key Mathematics
-The algorithm decides where to split data by calculating **Entropy** ($E$), a measure of impurity:
-$$E = - \sum_{i} p_i \cdot \log_2(p_i)$$
+**Entropy ($H$):**
+Measures impurity in a dataset $S$:
+$$H(S) = - \sum_{i} p_i \cdot \log_2(p_i)$$
 
-It selects the split that maximizes **Information Gain (IG)**:
-$$\text{IG} = \text{Entropy}_{parent} - \sum \text{Weighted Entropy}_{children}$$
-
+**Information Gain ($IG$):**
+Determines the best split by comparing parent entropy to the weighted entropy of children nodes ($S_c$):
+$$IG(S) = H(S) - \sum_{c} \frac{|S_c|}{|S|} H(S_c)$$
 ---
 
 ## 🔍 k-Means Clustering: Homework Effort Analysis
@@ -59,7 +60,7 @@ The model calculates transition probabilities using **Bayes' Theorem**:
 $$P(A|B) = \frac{P(B|A) \cdot P(A)}{P(B)}$$
 
 To introduce variety, predictions are adjusted using **Temperature ($T$)** inside a Softmax function:
-$$P'(w) = \frac{e^{\log(P(w))/T}}{\sum e^{\log(P(w_i))/T}}$$
+$$P'(w) = \frac{e^{P(w)/T}}{\sum e^{P(w_i)/T}}$$
 
 ---
 
