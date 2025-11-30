@@ -60,7 +60,7 @@ The model calculates transition probabilities using **Bayes' Theorem**:
 $$P(A|B) = \frac{P(B|A) \cdot P(A)}{P(B)}$$
 
 To introduce variety, predictions are adjusted using **Temperature ($T$)** inside a Softmax function:
-$$P'(w) = \frac{e^{P(w)/T}}{\sum e^{P(w_i)/T}}$$
+$$P'(w) = \frac{e^{\log{(P(w))}/T}}{\sum e^{\log{(P(w_i))}/T}}$$
 
 ---
 
