@@ -1,164 +1,107 @@
 # From Basics to Applications: <br> A Machine Learning Curriculum for High School
- 
-
 
 A collection of machine learning programs designed as part of my Matura thesis to introduce high school students to fundamental ML concepts. This resource hub is designed to help educators introduce machine learning concepts to students in an interactive and accessible way!
 
 ## Introduction
-This repository contains four machine learning projects developed to provide hands-on examples of core machine learning algorithms. The programs cover supervised and unsupervised learning, offering practical insights into how algorithms operate on data.
-
-The curriculum aims to make machine learning accessible for high school students, focusing on simplicity, clarity, and educational value. Each program includes essential comments to help students and teachers understand the code and underlying concepts.
+This repository contains four machine learning projects covering supervised and unsupervised learning. The curriculum aims to make machine learning accessible for high school students, focusing on simplicity, clarity, and educational value.
 
 ---
 
-## 1. 📈 Linear Regression: Caffeine Intake vs. Participation
+## 📈 Linear Regression: Caffeine Intake vs. Participation
 
-### Overview:  
-This program uses **linear regression** to predict class participation based on **caffeine intake**, illustrating how machine learning can model relationships between variables. By fitting a line to data points, the project provides an intuitive introduction to **predictive modeling** and **trend analysis**.  
+### Overview
+This program uses **linear regression** to predict class participation based on **caffeine intake**. It introduces predictive modeling by fitting a line to data points to find the trend that minimizes error.
 
-Students learn key concepts like the **sum of squared errors (SSE)** for measuring accuracy and the **least squares method** for calculating the best fit. The program features scatter plot visualisations and allows users to input caffeine levels to predict participation, offering a hands-on and engaging way to explore machine learning fundamentals.
+### Key Mathematics
+The model finds the **line of best fit** defined by the linear equation:
 
-### Concepts Covered:
-  - **Sum of Squared Error (SSE):** Measures the total deviation between the actual and predicted values, representing how well the regression line fits the data.  
-  - **Model Fitting:** The least squares method calculates the optimal slope and intercept to minimize prediction errors.  
-  - **Visualisation:** A regression line is plotted alongside the data points, providing a clear graphical representation of how the model interprets trends in the data.  
-  - **Prediction and User Interaction:** The program allows users to input their own caffeine intake to receive a predicted participation level, fostering engagement and real-time exploration.  
+$$y = mx + b$$
 
-<details>
- <p></p>
-  <summary>How to Run the Program:</summary>
-    
-1. **Clone the Repository:**  
-   ```bash
-   git clone https://github.com/mattia-3rne/MA_MachineLearningCurriculum.git
-2. **Navigate to the Project Directory:**  
-   ```bash
-   cd MA_MachineLearningCurriculum
-3. **Launch Jupyter Notebook:**  
-   ```bash
-   jupyter notebook
-4. **Open the Notebook:**  
-   ```bash
-    MA_LinearRegression.ipynb
-5. **Install Dependencies:**   
-   ```bash
-   pip install numpy pandas matplotlib notebook
+It optimizes the slope ($m$) and intercept ($b$) by minimizing the **Sum of Squared Errors (SSE)**:
 
-</details>
+$$\text{SSE}  = \sum_{i=1}^{n} (y_i - \hat{y}_i)^2 = \sum_{i=1}^{n} (y_i - (mx_i + b))^2$$
 
 ---
 
-## 2. 🌳 Decision Tree Classification: Study Hours vs. Exam Passing
+## 🌳 Decision Tree Classification: Study Hours vs. Exam Passing
 
-### Overview:
-This program implements a **Decision Tree Classifier** to predict whether a student passes an exam based on their **average score** and **hours studied**. By modeling decision boundaries through recursive data splitting, the algorithm visualises how machine learning can handle **classification tasks** in an intuitive and interpretable way.
+### Overview
+This program implements a **Decision Tree Classifier** to predict if a student passes an exam based on **scores** and **study hours**. It visualizes how the algorithm splits data recursively to create decision boundaries.
 
-The project focuses on **entropy** and **information gain** to evaluate how well a particular feature separates the data, providing a clear and practical introduction to core decision tree concepts. This makes it an ideal hands-on experience for students learning about classification models and decision-making in machine learning.
+### Key Mathematics
+**Entropy ($H$):**
+Measures impurity in a dataset $S$:
 
-### Concepts Covered:
-  - **Entropy:** Measures the level of uncertainty or disorder in the data. The goal of the model is to reduce entropy through optimal splits.  
-  - **Information Gain:** Represents the reduction in entropy after splitting the data. It helps the model identify the most effective feature and threshold for each decision point.  
-  - **Visualisation:** The decision tree's structure and decision boundaries are visualised alongside the training data, making the algorithm's logic more accessible.  
-  - **Threshold Exploration:** The program explores different thresholds for features to identify the best point to split the data, reinforcing the concept of recursive partitioning.
-  
+$$H(S) = - \sum_{i} p_i \cdot \log_2(p_i)$$
 
-<details>
- <p></p>
-  <summary>How to Run the Program:</summary>
-    
-1. **Clone the Repository:**  
-   ```bash
-   git clone https://github.com/mattia-3rne/MA_MachineLearningCurriculum.git
-2. **Navigate to the Project Directory:**  
-   ```bash
-   cd MA_MachineLearningCurriculum
-3. **Launch Jupyter Notebook:**  
-   ```bash
-   jupyter notebook
-4. **Open the Notebook:**  
-   ```bash
-    MA_DecisionTreeClassifier.ipynb
-5. **Install Dependencies:**   
-   ```bash
-   pip install numpy pandas matplotlib seaborn notebook
+**Information Gain ($IG$):**
+Determines the best split by comparing parent entropy to the weighted entropy of children nodes ($S_c$):
 
-</details>
+$$IG(S) = H(S) - \sum_{c} \frac{|S_c|}{|S|} H(S_c)$$
 
 ---
 
-## 3. 🔍 k-Means Clustering: Homework Effort Analysis
+## 🔍 k-Means Clustering: Homework Effort Analysis
 
-### Overview:
-This program implements **k-means clustering** to classify homework assignments into three categories based on **difficulty** and **amount of work**. By clustering similar data points, the algorithm provides an intuitive way to segment tasks into **low, medium, and high effort** levels.
+### Overview
+This program uses **k-Means Clustering** to categorise homework assignments into **low, medium, and high effort** based on difficulty and workload. It demonstrates how machines find hidden patterns in unlabelled data.
 
-The project offers a practical application of unsupervised learning, demonstrating how clustering can identify hidden patterns in data without labeled examples. This hands-on experience introduces students to the core principles of **data segmentation and clustering algorithms**.
+### Key Mathematics
+The algorithm groups points by calculating the **Euclidean distance** between a data point ($x$) and a cluster center (centroid $\mu$):
 
-### Concepts Covered:
-  - **Clustering:** Demonstrates how data points are grouped into clusters based on similarity. The program divides homework tasks into effort-based categories. 
-  - **k-Means Algorithm:** Uses the k-means method to iteratively find cluster centers that minimize the variance within each cluster.
-  - **Cluster Visualisation:** The program plots the clusters and visualises their boundaries, providing a clear representation of how the model organizes data. 
-  - **Sorting and Labeling:** After clustering, the program reorders the clusters to reflect increasing effort, ensuring the output is interpretable and meaningful.
-  
+$$d(x, \mu) = \sqrt{(x_1 - \mu_1)^2 + (x_2 - \mu_2)^2}$$
 
-<details>
- <p></p>
-  <summary>How to Run the Program:</summary>
-    
-1. **Clone the Repository:**  
-   ```bash
-   git clone https://github.com/mattia-3rne/MA_MachineLearningCurriculum.git
-2. **Navigate to the Project Directory:**  
-   ```bash
-   cd MA_MachineLearningCurriculum
-3. **Launch Jupyter Notebook:**  
-   ```bash
-   jupyter notebook
-4. **Open the Notebook:**  
-   ```bash
-    MA_K-MeansClustering.ipynb
-5. **Install Dependencies:**   
-   ```bash
-   pip install numpy matplotlib scikit-learn notebook
+The centroid is updated iteratively by calculating the **mean** of all points in the cluster:
 
-</details>
+$$\mu_j = \frac{1}{n} \sum x_i$$
 
 ---
 
-## 4. 📝 Naive Bayes Text Prediction: Next Word Generator
+## 📝 Naive Bayes Text Prediction: Next Word Generator
 
-### Overview:
-This program implements a **Naive Bayes-based text prediction model** to generate the next words in a sequence based on a given starting sentence. The model uses **Bayes' Theorem** to calculate transition probabilities between words, predicting future words based on prior context. The project applies **temperature scaling** to adjust the randomness of predictions, offering a simple yet effective introduction to **natural language processing (NLP)** concepts.
+### Overview
+This program uses a **Naive Bayes** model to generate text in the style of Shakespeare. It calculates the probability of the next word occurring based on the current word, using temperature scaling to adjust creativity.
 
-By analysing a sample text (such as the script of Romeo and Juliet), the program builds a probabilistic model capable of generating coherent sentences, mimicking the behavior of language models. This project helps students understand the fundamentals of **probabilistic text generation** and **word prediction**, bridging the gap between basic machine learning algorithms and more advanced NLP models.
-### Concepts Covered:
-  - **Bayes' Theorem:** The model predicts the likelihood of a word appearing after another by applying conditional probability to word transitions.
-  - **Bigram Model:** The program counts pairs of consecutive words (bigrams) to build transition probabilities, reflecting how often one word follows another.
-  - **Temperature Scaling:** Adjusts the certainty of predictions, allowing control over the model's randomness and creativity
-  - **Markov Chain Text Generation:** Words are predicted sequentially, forming a chain of probabilities that drive the text generation process.
-  
+### Key Mathematics
+The model calculates transition probabilities using **Bayes' Theorem**:
 
-<details>
- <p></p>
-  <summary>How to Run the Program:</summary>
-    
-1. **Clone the Repository:**  
-   ```bash
-   git clone https://github.com/mattia-3rne/MA_MachineLearningCurriculum.git
-2. **Navigate to the Project Directory:**  
-   ```bash
-   cd MA_MachineLearningCurriculum
-3. **Launch Jupyter Notebook:**  
-   ```bash
-   jupyter notebook
-4. **Open the Notebook:**  
-   ```bash
-    MA_NaiveBayesTextPrediction.ipynb
-5. **Install Dependencies:**   
-   ```bash
-   pip install numpy matplotlib notebook  
+$$P(A|B) = \frac{P(B|A) \cdot P(A)}{P(B)}$$
 
-</details>
+To introduce variety, predictions are adjusted using **Temperature ($T$)** inside a Softmax function:
+
+$$P'(w) = \frac{e^{\log{(P(w))}/T}}{\sum e^{\log{(P(w_i))}/T}}$$
 
 ---
 
+## 🚀 Getting Started
 
+### Prerequisites
+* Python 3.8+
+* Jupyter Notebook
+
+### Installation
+
+1.  **Clone the Repository:**
+    ```bash
+    git clone https://github.com/mattia-3rne/Machine-Learning-Curriculum.git
+    ```
+
+2.  **Install Dependencies:**
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+3.  **Launch Jupyter Notebook:**
+    ```bash
+    jupyter notebook
+    ```
+
+## 📂 Project Structure
+
+* `decision_tree_classification.ipynb`: Decision Tree Classification.
+* `naive_bayes_text_prediction.ipynb`: Naive Bayes text prediction.
+* `k_means_clustering.ipynb`: k-Means Clustering.
+* `linear_regression.ipynb`: Linear Regression.
+* `requirements.txt`: Python dependencies.
+* `README.md`: Project documentation.
+* `Slides`: Teaching slides.
